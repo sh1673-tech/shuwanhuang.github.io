@@ -3,130 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile | Your Name</title>
+    <title>Professional Profile | Shuwan Huang</title>
+
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f7f6;
+        :root {
+            --navy: #16213e;
+            --charcoal: #2b2d42;
+            --cream: #f6f1e9;
+            --white: #ffffff;
+            --gold: #b89b5e;
+            --muted-blue: #415a77;
+            --text: #30343f;
+            --soft-gray: #eef1f4;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--cream), var(--soft-gray));
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 20px;
+        }
+
         header {
             text-align: center;
-            padding: 40px 0;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 55px 30px;
+            background: linear-gradient(135deg, var(--navy), var(--muted-blue));
+            color: var(--white);
+            border-radius: 18px;
+            box-shadow: 0 12px 28px rgba(22, 33, 62, 0.22);
         }
+
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 145px;
+            height: 145px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #0077b5;
+            border: 4px solid var(--gold);
+            margin-bottom: 18px;
+            background-color: var(--white);
         }
+
+        h1 {
+            margin: 10px 0 8px;
+            font-size: 2.4rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 1rem;
+            color: #eee7d8;
+            letter-spacing: 0.4px;
+        }
+
         section {
-            margin-top: 20px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: 24px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 22px rgba(40, 50, 70, 0.08);
+            border: 1px solid #e2d8c7;
         }
+
         h2 {
-            color: #0077b5;
-            border-bottom: 2px solid #eee;
+            margin-top: 0;
+            color: var(--navy);
+            font-size: 1.45rem;
+            border-bottom: 2px solid var(--gold);
             padding-bottom: 10px;
+            letter-spacing: 0.5px;
         }
+
+        h3 {
+            margin-bottom: 4px;
+            color: var(--charcoal);
+            font-size: 1.05rem;
+        }
+
+        .date-location {
+            margin-top: 0;
+            color: #6c7280;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.92rem;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
+
         .skills-list li {
-            background: #e1f5fe;
-            color: #0277bd;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
+            background: #f1eadc;
+            color: var(--navy);
+            border: 1px solid #d6c48a;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        a {
+            color: var(--muted-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #777;
+            margin-top: 34px;
+            padding: 20px;
+            color: #6c7280;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.85rem;
         }
-        a {
-            color: #0077b5;
-            text-decoration: none;
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 600;
         }
-        a:hover {
-            text-decoration: underline;
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 24px;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
 
-    <header>
-        <img src="Assets/ProfilePic.jpeg" alt="Your Name Profile Picture" class="profile-img">
-        <h1>Shuwan Huang</h1>
-        <p>Accounting Student | Business Learner | Future Professional</p>
-    </header>
+        <header>
+            <img src="Assets/ProfilePic.jpeg" alt="Shuwan Huang Profile Picture" class="profile-img">
+            <h1>Shuwan Huang</h1>
+            <p class="subtitle">Accounting Student | Rutgers Business School | Future Business Professional</p>
+        </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
+        <section id="about">
+            <h2>About Me</h2>
             <p>
-  Hello! My name is Shuwan Huang. I am an accounting student at Rutgers University.
-  I am interested in accounting, business strategy, technology, and professional development.
-  This webpage introduces my background, skills, and interests.
-</p>
-        </p>
-    </section>
+                Hello, my name is <strong>Shuwan Huang</strong>. I am an accounting student at
+                <span class="highlight">Rutgers Business School</span>, Rutgers University.
+                I am interested in accounting, finance, business operations, and professional development.
+            </p>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>Accounting</strong> – Rutgers University <br>
-                <em>Expected Graduation: May 2026</em>
-            </li>
-        </ul>
-    </section>
+            <p>
+                My academic background has helped me build a foundation in accounting and business.
+                Through my internship experience in the international business department of China Construction Bank,
+                I also developed an interest in financial documents, customer data, and business communication.
+            </p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Project Management</li>
-            <li>Public Speaking</li>
-            <li>Data Analysis</li>
-            <li>HTML/CSS</li>
-            <li>Problem Solving</li>
-        </ul>
-    </section>
+        <section id="education">
+            <h2>Education</h2>
 
-    <section id="interests">
-        <h2>Interests</h2>
-        <p>
-            I am interested in accounting, business strategy, technology, and professional development.
-        </p>
-    </section>
+            <h3>Rutgers, The State University of New Jersey</h3>
+            <p class="date-location">Rutgers Business School | New Brunswick, NJ | Expected May 2026</p>
+            <ul>
+                <li>Bachelor of Science in Accounting</li>
+                <li>GPA: 3.438 / 4.0</li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:your.email@example.com">sh1673@scarletmail.rutgers.edu</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">https://www.linkedin.com/in/shuwan-huang/</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">shuwanhuang.github.io</a></p>
-    </section>
+        <section id="experience">
+            <h2>Professional Experience</h2>
 
-    <footer>
-        <p>&copy; 2026 Your Name. Built for Class Assignment.</p>
-    </footer>
+            <h3>China Construction Bank, Shanghai Branch</h3>
+            <p class="date-location">Business Assistant, International Business Department | Shanghai, China | July 2018 – August 2018</p>
+            <ul>
+                <li>Initiated regular customer data collection and provided comprehensive reports to the department manager.</li>
+                <li>Developed knowledge of letters of credit, bills of exchange, and international business terminology.</li>
+                <li>Helped improve document accuracy and processing efficiency through careful review of business materials.</li>
+            </ul>
+        </section>
 
+        <section id="service">
+            <h2>Community Service</h2>
+
+            <h3>Mask Collection & Donation Volunteer</h3>
+            <p class="date-location">February 2019 – March 2019</p>
+            <ul>
+                <li>Coordinated mask procurement and helped manage shipping progress remotely.</li>
+                <li>Addressed transportation concerns with the Chinese Embassy in France.</li>
+                <li>Helped purchase and donate 3,000 masks to a local hospital in Shanghai.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Microsoft Excel</li>
+                <li>Microsoft Access</li>
+                <li>Microsoft PowerPoint</li>
+                <li>Microsoft Word</li>
+                <li>Accounting Knowledge</li>
+                <li>Customer Data Collection</li>
+                <li>Business Communication</li>
+                <li>Document Review</li>
+                <li>HTML / CSS</li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Professional Interests</h2>
+            <p>
+                I am interested in accounting, financial services, business analysis, and international business.
+                I hope to continue developing my technical skills, communication skills, and professional judgment
+                as I prepare for my future career.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+
+            <div class="contact-grid">
+                <p>Email:<br>
+                    <a href="mailto:sh1673@scarletmail.rutgers.edu">sh1673@scarletmail.rutgers.edu</a>
+                </p>
+
+                <p>LinkedIn:<br>
+                    <a href="https://www.linkedin.com/in/shuwan-huang-5b8590252" target="_blank">
+                        linkedin.com/in/shuwan-huang-5b8590252
+                    </a>
+                </p>
+
+                <p>GitHub:<br>
+                    <a href="https://sh1673-tech.github.io/shuwanhuang.github.io/" target="_blank">
+                        sh1673-tech.github.io/shuwanhuang.github.io
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Shuwan Huang. Professional Profile Website.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
