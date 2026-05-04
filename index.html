@@ -11,7 +11,7 @@
             --white: #ffffff;
             --warm-brown: #765a49;
             --deep-brown: #5f4638;
-            --soft-blue: #5d7486;
+            --soft-blue: #dbe8ef;
             --dark-blue: #2f4a5f;
             --gold: #b99b63;
             --text: #353535;
@@ -44,80 +44,89 @@
             box-shadow: 0 0 40px rgba(83, 67, 55, 0.16);
         }
 
-        /* Top Hero Image */
-        .hero-image {
-            height: 285px;
+        /* Hero Section: 图片就是整个首页顶部，不再有白色空白 */
+        .hero {
+            min-height: 620px;
             background-image:
-                linear-gradient(rgba(40, 35, 30, 0.08), rgba(40, 35, 30, 0.08)),
+                linear-gradient(
+                    rgba(20, 20, 20, 0.18),
+                    rgba(20, 20, 20, 0.35)
+                ),
                 url("Assets/HeroImage.jpeg");
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
         }
 
-        /* Intro Section */
-        .intro {
-            text-align: center;
-            padding: 0 20px 48px;
-            background: var(--white);
+        .hero-content {
+            max-width: 850px;
+            padding: 30px 20px;
         }
 
         .profile-img {
-            width: 190px;
-            height: 190px;
+            width: 210px;
+            height: 210px;
             border-radius: 50%;
             object-fit: contain;
             object-position: center;
             background: #ffffff;
-            border: 7px solid #ffffff;
-            box-shadow: 0 12px 30px rgba(70, 56, 45, 0.20);
+            border: 7px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
             display: block;
-            margin: -95px auto 20px;
+            margin: 0 auto 26px;
         }
 
-        .intro h1 {
+        .hero h1 {
             margin: 0;
-            font-size: 3.6rem;
+            font-size: 4.4rem;
             font-weight: 500;
-            letter-spacing: 1px;
-            color: var(--soft-blue);
+            letter-spacing: 1.2px;
+            color: #ffffff;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
             line-height: 1.1;
         }
 
-        .intro .subtitle {
-            margin: 16px 0 0;
-            font-size: 1.18rem;
+        .hero .subtitle {
+            margin: 18px 0 0;
+            font-size: 1.35rem;
             font-weight: 600;
-            color: #aaa39d;
+            color: #f4efe8;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
         }
 
         .social-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 22px;
-            width: 50px;
-            height: 50px;
+            margin-top: 24px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             background: var(--warm-brown);
             color: white;
             font-family: Arial, sans-serif;
             font-weight: bold;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             text-decoration: none;
             transition: all 0.3s ease;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
         }
 
         .social-button:hover {
             background: var(--deep-brown);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(95, 70, 56, 0.28);
+            transform: translateY(-4px);
             text-decoration: none;
         }
 
         /* Navigation Bar */
         nav {
             background: var(--warm-brown);
-            padding: 20px 20px;
+            padding: 22px 20px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -148,7 +157,6 @@
             font-weight: bold;
         }
 
-        /* Main Content */
         main {
             padding: 48px 60px 65px;
             background: #fbfaf8;
@@ -281,26 +289,23 @@
         }
 
         @media (max-width: 768px) {
-            .hero-image {
-                height: 230px;
+            .hero {
+                min-height: 560px;
+                padding: 45px 18px;
             }
 
             .profile-img {
-                width: 160px;
-                height: 160px;
-                margin: -80px auto 18px;
+                width: 165px;
+                height: 165px;
+                margin-bottom: 22px;
             }
 
-            .intro {
-                padding-bottom: 42px;
+            .hero h1 {
+                font-size: 2.8rem;
             }
 
-            .intro h1 {
-                font-size: 2.65rem;
-            }
-
-            .intro .subtitle {
-                font-size: 1rem;
+            .hero .subtitle {
+                font-size: 1.05rem;
             }
 
             nav a {
@@ -331,20 +336,20 @@
 <body>
     <div class="page">
 
-        <div class="hero-image"></div>
+        <header class="hero">
+            <div class="hero-content">
+                <img src="Assets/ProfilePic.jpeg" alt="Shuwan Huang Profile Picture" class="profile-img">
 
-        <header class="intro">
-            <img src="Assets/ProfilePic.jpeg" alt="Shuwan Huang Profile Picture" class="profile-img">
+                <h1>Shuwan Huang</h1>
+                <p class="subtitle">- Accounting Student at Rutgers Business School -</p>
 
-            <h1>Shuwan Huang</h1>
-            <p class="subtitle">- Accounting Student at Rutgers Business School -</p>
-
-            <a class="social-button"
-               href="https://www.linkedin.com/in/shuwan-huang-5b8590252"
-               target="_blank"
-               aria-label="LinkedIn Profile">
-                in
-            </a>
+                <a class="social-button"
+                   href="https://www.linkedin.com/in/shuwan-huang-5b8590252"
+                   target="_blank"
+                   aria-label="LinkedIn Profile">
+                    in
+                </a>
+            </div>
         </header>
 
         <nav>
@@ -413,15 +418,9 @@
                 </p>
 
                 <ul>
-                    <li>
-                        Initiated regular customer data collection and provided comprehensive reports to the department manager.
-                    </li>
-                    <li>
-                        Developed knowledge of letters of credit, bills of exchange, and international business terminology.
-                    </li>
-                    <li>
-                        Helped improve document accuracy and processing efficiency through careful review of business materials.
-                    </li>
+                    <li>Initiated regular customer data collection and provided comprehensive reports to the department manager.</li>
+                    <li>Developed knowledge of letters of credit, bills of exchange, and international business terminology.</li>
+                    <li>Helped improve document accuracy and processing efficiency through careful review of business materials.</li>
                 </ul>
             </section>
 
@@ -432,15 +431,9 @@
                 <p class="date-location">February 2019 – March 2019</p>
 
                 <ul>
-                    <li>
-                        Coordinated mask procurement and helped manage shipping progress remotely.
-                    </li>
-                    <li>
-                        Addressed transportation concerns with the Chinese Embassy in France.
-                    </li>
-                    <li>
-                        Helped purchase and donate 3,000 masks to a local hospital in Shanghai.
-                    </li>
+                    <li>Coordinated mask procurement and helped manage shipping progress remotely.</li>
+                    <li>Addressed transportation concerns with the Chinese Embassy in France.</li>
+                    <li>Helped purchase and donate 3,000 masks to a local hospital in Shanghai.</li>
                 </ul>
             </section>
 
