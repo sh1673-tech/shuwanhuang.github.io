@@ -11,7 +11,6 @@
             --white: #ffffff;
             --warm-brown: #765a49;
             --deep-brown: #5f4638;
-            --soft-blue: #dbe8ef;
             --dark-blue: #2f4a5f;
             --gold: #b99b63;
             --text: #353535;
@@ -44,13 +43,13 @@
             box-shadow: 0 0 40px rgba(83, 67, 55, 0.16);
         }
 
-        /* Hero Section: 图片就是整个首页顶部，不再有白色空白 */
+        /* Compact Hero Section */
         .hero {
-            min-height: 620px;
+            min-height: 430px;
             background-image:
                 linear-gradient(
-                    rgba(20, 20, 20, 0.18),
-                    rgba(20, 20, 20, 0.35)
+                    rgba(20, 20, 20, 0.28),
+                    rgba(20, 20, 20, 0.42)
                 ),
                 url("Assets/HeroImage.jpeg");
             background-size: cover;
@@ -59,74 +58,74 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 20px;
+            padding: 35px 20px;
             color: white;
         }
 
         .hero-content {
-            max-width: 850px;
-            padding: 30px 20px;
+            max-width: 760px;
+            padding: 18px 20px;
         }
 
         .profile-img {
-            width: 210px;
-            height: 210px;
+            width: 145px;
+            height: 145px;
             border-radius: 50%;
             object-fit: contain;
             object-position: center;
             background: #ffffff;
-            border: 7px solid rgba(255, 255, 255, 0.95);
-            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+            border: 5px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
             display: block;
-            margin: 0 auto 26px;
+            margin: 0 auto 18px;
         }
 
         .hero h1 {
             margin: 0;
-            font-size: 4.4rem;
+            font-size: 3rem;
             font-weight: 500;
-            letter-spacing: 1.2px;
+            letter-spacing: 1px;
             color: #ffffff;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-            line-height: 1.1;
+            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+            line-height: 1.08;
         }
 
         .hero .subtitle {
-            margin: 18px 0 0;
-            font-size: 1.35rem;
+            margin: 12px 0 0;
+            font-size: 1.05rem;
             font-weight: 600;
             color: #f4efe8;
-            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
         }
 
         .social-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 24px;
-            width: 54px;
-            height: 54px;
+            margin-top: 18px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             background: var(--warm-brown);
             color: white;
             font-family: Arial, sans-serif;
             font-weight: bold;
-            font-size: 1.25rem;
+            font-size: 1rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
         }
 
         .social-button:hover {
             background: var(--deep-brown);
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             text-decoration: none;
         }
 
         /* Navigation Bar */
         nav {
             background: var(--warm-brown);
-            padding: 22px 20px;
+            padding: 16px 20px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -139,9 +138,9 @@
             font-family: "Segoe UI", Arial, sans-serif;
             font-weight: 700;
             letter-spacing: 2px;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
-            margin: 0 18px;
+            margin: 0 16px;
             opacity: 0.9;
             transition: all 0.3s ease;
         }
@@ -157,6 +156,7 @@
             font-weight: bold;
         }
 
+        /* Main Content */
         main {
             padding: 48px 60px 65px;
             background: #fbfaf8;
@@ -290,28 +290,35 @@
 
         @media (max-width: 768px) {
             .hero {
-                min-height: 560px;
-                padding: 45px 18px;
+                min-height: 390px;
+                padding: 32px 18px;
             }
 
             .profile-img {
-                width: 165px;
-                height: 165px;
-                margin-bottom: 22px;
+                width: 125px;
+                height: 125px;
+                margin-bottom: 16px;
             }
 
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.3rem;
             }
 
             .hero .subtitle {
-                font-size: 1.05rem;
+                font-size: 0.95rem;
+            }
+
+            .social-button {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+                margin-top: 15px;
             }
 
             nav a {
                 display: inline-block;
-                margin: 8px 10px;
-                font-size: 0.82rem;
+                margin: 7px 9px;
+                font-size: 0.78rem;
             }
 
             nav span {
