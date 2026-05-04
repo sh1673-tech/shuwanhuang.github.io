@@ -46,9 +46,9 @@
 
         /* Top Hero Image */
         .hero-image {
-            height: 380px;
+            height: 285px;
             background-image:
-                linear-gradient(rgba(40, 35, 30, 0.12), rgba(40, 35, 30, 0.12)),
+                linear-gradient(rgba(40, 35, 30, 0.08), rgba(40, 35, 30, 0.08)),
                 url("Assets/HeroImage.jpeg");
             background-size: cover;
             background-position: center;
@@ -57,34 +57,35 @@
         /* Intro Section */
         .intro {
             text-align: center;
-            padding: 0 20px 72px;
+            padding: 0 20px 48px;
             background: var(--white);
         }
 
         .profile-img {
-            width: 220px;
-            height: 220px;
+            width: 190px;
+            height: 190px;
             border-radius: 50%;
             object-fit: contain;
             object-position: center;
             background: #ffffff;
             border: 7px solid #ffffff;
-            box-shadow: 0 12px 30px rgba(70, 56, 45, 0.22);
+            box-shadow: 0 12px 30px rgba(70, 56, 45, 0.20);
             display: block;
-            margin: -110px auto 26px;
+            margin: -95px auto 20px;
         }
 
         .intro h1 {
             margin: 0;
-            font-size: 4rem;
+            font-size: 3.6rem;
             font-weight: 500;
             letter-spacing: 1px;
             color: var(--soft-blue);
+            line-height: 1.1;
         }
 
         .intro .subtitle {
-            margin-top: 18px;
-            font-size: 1.35rem;
+            margin: 16px 0 0;
+            font-size: 1.18rem;
             font-weight: 600;
             color: #aaa39d;
         }
@@ -93,22 +94,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 28px;
-            width: 54px;
-            height: 54px;
+            margin-top: 22px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: var(--warm-brown);
             color: white;
             font-family: Arial, sans-serif;
             font-weight: bold;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .social-button:hover {
             background: var(--deep-brown);
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             box-shadow: 0 8px 18px rgba(95, 70, 56, 0.28);
             text-decoration: none;
         }
@@ -116,7 +117,7 @@
         /* Navigation Bar */
         nav {
             background: var(--warm-brown);
-            padding: 22px 20px;
+            padding: 20px 20px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -132,7 +133,7 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             margin: 0 18px;
-            opacity: 0.88;
+            opacity: 0.9;
             transition: all 0.3s ease;
         }
 
@@ -149,12 +150,12 @@
 
         /* Main Content */
         main {
-            padding: 55px 60px 70px;
+            padding: 48px 60px 65px;
             background: #fbfaf8;
         }
 
         section {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             background: white;
             border-radius: 18px;
             padding: 34px;
@@ -281,21 +282,25 @@
 
         @media (max-width: 768px) {
             .hero-image {
-                height: 260px;
+                height: 230px;
             }
 
             .profile-img {
-                width: 175px;
-                height: 175px;
-                margin: -88px auto 24px;
+                width: 160px;
+                height: 160px;
+                margin: -80px auto 18px;
+            }
+
+            .intro {
+                padding-bottom: 42px;
             }
 
             .intro h1 {
-                font-size: 2.7rem;
+                font-size: 2.65rem;
             }
 
             .intro .subtitle {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
 
             nav a {
@@ -404,7 +409,7 @@
 
                 <h3>China Construction Bank, Shanghai Branch</h3>
                 <p class="date-location">
-                    Business Assistant, International Business Department | Shanghai, China
+                    Business Assistant, International Business Department | Shanghai, China | July 2018 – August 2018
                 </p>
 
                 <ul>
