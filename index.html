@@ -19,6 +19,7 @@
             --light-brown: #efe6dc;
             --lavender: #eee8f7;
             --card-shadow: 0 10px 28px rgba(70, 56, 45, 0.13);
+            --magic-gold: #e8cf91;
         }
 
         * {
@@ -45,13 +46,12 @@
             box-shadow: 0 0 40px rgba(83, 67, 55, 0.16);
         }
 
-        /* Hero Section */
         .hero {
             min-height: 420px;
             background-image:
                 linear-gradient(
-                    rgba(20, 20, 20, 0.30),
-                    rgba(20, 20, 20, 0.46)
+                    rgba(16, 20, 24, 0.34),
+                    rgba(16, 20, 24, 0.58)
                 ),
                 url("Assets/HeroImage.jpeg");
             background-size: cover;
@@ -71,7 +71,6 @@
             flex: 0 0 430px;
         }
 
-        /* Better avatar frame - unchanged from your current setting */
         .profile-wrap {
             position: relative;
             width: 162px;
@@ -167,95 +166,178 @@
             text-decoration: none;
         }
 
-        /* Featured App Card in Hero */
         .hero-feature {
-            max-width: 390px;
-            background: rgba(255, 255, 255, 0.93);
-            color: var(--text);
-            border-radius: 22px;
-            padding: 26px;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(6px);
+            width: 430px;
             margin-left: auto;
+            text-align: center;
+            color: white;
+            padding: 16px 10px;
         }
 
-        .hero-feature-label {
-            display: inline-block;
-            margin-bottom: 12px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: var(--lavender);
-            color: var(--deep-brown);
-            font-family: "Segoe UI", Arial, sans-serif;
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
+        .magic-orb {
+            position: relative;
+            width: 154px;
+            height: 154px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            border: 1px solid rgba(232, 207, 145, 0.78);
+            background: radial-gradient(circle, rgba(232, 207, 145, 0.12), rgba(255, 255, 255, 0.03) 55%, rgba(232, 207, 145, 0.06));
+            box-shadow:
+                0 0 22px rgba(232, 207, 145, 0.34),
+                inset 0 0 24px rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .magic-orb::before {
+            content: "";
+            position: absolute;
+            width: 190px;
+            height: 54px;
+            border: 1px solid rgba(232, 207, 145, 0.62);
+            border-radius: 50%;
+            transform: rotate(-16deg);
+            opacity: 0.8;
+        }
+
+        .magic-orb::after {
+            content: "✦";
+            position: absolute;
+            right: 12px;
+            top: 16px;
+            color: var(--magic-gold);
+            font-size: 1.25rem;
+            text-shadow: 0 0 12px rgba(232, 207, 145, 0.85);
+        }
+
+        .magic-icon {
+            position: relative;
+            z-index: 2;
+            font-size: 4.3rem;
+            line-height: 1;
+            filter: drop-shadow(0 0 10px rgba(232, 207, 145, 0.48));
         }
 
         .hero-feature h2 {
             margin: 0 0 10px;
-            color: var(--dark-blue);
-            font-size: 1.55rem;
-            line-height: 1.2;
+            color: #ffffff;
+            font-size: 1.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.38);
             border-bottom: none;
             padding-bottom: 0;
         }
 
         .hero-feature p {
-            margin: 0 0 18px;
-            color: #5f5a55;
+            max-width: 395px;
+            margin: 0 auto 18px;
+            color: rgba(255, 255, 255, 0.88);
             font-family: "Segoe UI", Arial, sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.86rem;
+            line-height: 1.62;
+            text-shadow: 0 2px 9px rgba(0, 0, 0, 0.34);
+        }
+
+        .magic-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 14px auto 14px;
+            max-width: 300px;
+            color: var(--magic-gold);
+        }
+
+        .magic-divider::before,
+        .magic-divider::after {
+            content: "";
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, transparent, rgba(232, 207, 145, 0.58), transparent);
         }
 
         .hero-feature-tags {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 8px;
             padding: 0;
-            margin: 0 0 20px;
+            margin: 0 0 18px;
             list-style: none;
         }
 
         .hero-feature-tags li {
             margin: 0;
-            background: #f7f2eb;
-            color: var(--deep-brown);
-            border: 1px solid #dfcfbd;
-            padding: 6px 10px;
+            color: rgba(255, 247, 226, 0.95);
+            border: 1px solid rgba(232, 207, 145, 0.58);
+            background: rgba(24, 23, 20, 0.24);
+            padding: 6px 11px;
             border-radius: 999px;
             font-family: "Segoe UI", Arial, sans-serif;
-            font-size: 0.76rem;
+            font-size: 0.72rem;
             font-weight: 700;
+            backdrop-filter: blur(4px);
         }
 
         .hero-project-button {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-            background: var(--warm-brown);
-            color: white;
-            padding: 12px 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 230px;
+            background: rgba(24, 23, 20, 0.32);
+            color: #fff7e2;
+            border: 1px solid rgba(232, 207, 145, 0.9);
+            padding: 11px 22px;
             border-radius: 999px;
-            font-family: "Segoe UI", Arial, sans-serif;
-            font-weight: 800;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 500;
             font-size: 0.92rem;
             text-decoration: none;
-            box-shadow: 0 8px 18px rgba(95, 70, 56, 0.24);
+            box-shadow:
+                0 0 18px rgba(232, 207, 145, 0.38),
+                inset 0 0 12px rgba(232, 207, 145, 0.08);
             transition: all 0.3s ease;
         }
 
         .hero-project-button:hover {
-            background: var(--deep-brown);
+            background: rgba(232, 207, 145, 0.16);
             color: white;
             transform: translateY(-3px);
             text-decoration: none;
+            box-shadow:
+                0 0 24px rgba(232, 207, 145, 0.52),
+                inset 0 0 14px rgba(232, 207, 145, 0.12);
         }
 
-        /* Navigation Bar */
+        .project-details-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 11px;
+            min-width: 235px;
+            color: #fff0c7;
+            border: 1px solid rgba(232, 207, 145, 0.58);
+            background: rgba(0, 0, 0, 0.18);
+            padding: 8px 17px;
+            border-radius: 999px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .project-details-link:hover {
+            color: white;
+            background: rgba(232, 207, 145, 0.12);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
         nav {
             background: var(--warm-brown);
             padding: 16px 20px;
@@ -289,7 +371,6 @@
             font-weight: bold;
         }
 
-        /* Main Content */
         main {
             padding: 48px 60px 65px;
             background: #fbfaf8;
@@ -377,7 +458,6 @@
             font-weight: 600;
         }
 
-        /* Project Card */
         .project-card {
             background:
                 radial-gradient(circle at top right, rgba(238, 232, 247, 0.85), transparent 34%),
@@ -538,8 +618,8 @@
 
             .hero-feature {
                 margin-left: 0;
-                max-width: 520px;
                 width: 100%;
+                max-width: 460px;
             }
         }
 
@@ -578,6 +658,28 @@
                 height: 40px;
                 font-size: 0.95rem;
                 margin-top: 15px;
+            }
+
+            .magic-orb {
+                width: 130px;
+                height: 130px;
+            }
+
+            .magic-orb::before {
+                width: 160px;
+                height: 44px;
+            }
+
+            .magic-icon {
+                font-size: 3.6rem;
+            }
+
+            .hero-feature h2 {
+                font-size: 1.55rem;
+            }
+
+            .hero-feature p {
+                font-size: 0.8rem;
             }
 
             nav a {
@@ -633,26 +735,38 @@
             </div>
 
             <div class="hero-feature">
-                <span class="hero-feature-label">Featured Project</span>
+                <div class="magic-orb">
+                    <div class="magic-icon">🧙‍♀️</div>
+                </div>
 
                 <h2>CPA ISC Study App</h2>
 
                 <p>
-                    A web-based study tool that combines CPA exam preparation,
-                    accounting technology, and light gamification.
+                    A web-based study tool designed to help CPA candidates practice ISC concepts through
+                    topic-based questions, instant feedback, score tracking, progress tracking, and light gamification.
+                    The app combines accounting knowledge with an engaging user experience.
                 </p>
 
+                <div class="magic-divider">✦</div>
+
                 <ul class="hero-feature-tags">
-                    <li>CPA ISC</li>
-                    <li>JavaScript</li>
-                    <li>JSON Question Bank</li>
-                    <li>Score Tracking</li>
+                    <li>📖 CPA Focused</li>
+                    <li>🎯 Topic-Based</li>
+                    <li>📊 Progress Tracking</li>
+                    <li>☆ Gamified</li>
                 </ul>
 
                 <a class="hero-project-button"
                    href="cpa-isc-study-app/index.html"
                    target="_blank">
-                    🧙 Explore the App
+                    Explore the App <span>→</span>
+                </a>
+
+                <br>
+
+                <a class="project-details-link"
+                   href="#projects">
+                    View full project details in Projects <span>↓</span>
                 </a>
             </div>
         </header>
