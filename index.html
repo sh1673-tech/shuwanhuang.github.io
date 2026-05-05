@@ -46,7 +46,7 @@
         }
 
         .hero {
-            min-height: 430px;
+            min-height: 390px;
             background-image:
                 linear-gradient(
                     rgba(10, 18, 24, 0.42),
@@ -59,22 +59,22 @@
             align-items: center;
             justify-content: flex-start;
             text-align: left;
-            padding: 34px 78px;
+            padding: 28px 70px;
             color: white;
-            gap: 58px;
+            gap: 52px;
         }
 
         .hero-content {
             max-width: 560px;
-            padding: 16px 10px;
-            flex: 0 0 430px;
+            padding: 10px 8px;
+            flex: 0 0 420px;
         }
 
         .profile-wrap {
             position: relative;
             width: 162px;
             height: 162px;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
         .profile-wrap::before {
@@ -125,27 +125,29 @@
 
         .hero h1 {
             margin: 0;
-            font-size: 2.85rem;
+            font-size: 2.7rem;
             font-weight: 500;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.6px;
             color: #ffffff;
             text-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
-            line-height: 1.08;
+            line-height: 1.05;
         }
 
         .hero .subtitle {
-            margin: 12px 0 0;
-            font-size: 1.03rem;
+            margin: 10px 0 0;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #f4efe8;
+            color: var(--soft-gold);
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+            white-space: nowrap;
+            letter-spacing: 0.2px;
         }
 
         .social-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 18px;
+            margin-top: 16px;
             width: 44px;
             height: 44px;
             border-radius: 50%;
@@ -166,17 +168,17 @@
         }
 
         .hero-feature {
-            max-width: 430px;
+            max-width: 400px;
             margin-left: auto;
             color: #fffaf0;
             text-align: center;
-            padding: 18px 12px;
+            padding: 8px 8px;
         }
 
         .app-orbit {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 18px;
+            width: 132px;
+            height: 132px;
+            margin: 0 auto 14px;
             border-radius: 50%;
             border: 1.5px solid rgba(242, 223, 179, 0.85);
             display: flex;
@@ -192,8 +194,8 @@
         .app-orbit::before {
             content: "";
             position: absolute;
-            width: 198px;
-            height: 74px;
+            width: 176px;
+            height: 62px;
             border: 1px solid rgba(242, 223, 179, 0.58);
             border-radius: 50%;
             transform: rotate(-18deg);
@@ -204,39 +206,39 @@
             content: "✦";
             position: absolute;
             right: 18px;
-            top: 15px;
+            top: 14px;
             color: var(--soft-gold);
-            font-size: 1.05rem;
+            font-size: 1rem;
             text-shadow: 0 0 10px rgba(242, 223, 179, 0.9);
         }
 
         .app-icon {
             position: relative;
             z-index: 2;
-            font-size: 3.7rem;
+            font-size: 3.2rem;
             line-height: 1;
             filter: drop-shadow(0 0 10px rgba(242, 223, 179, 0.5));
         }
 
         .hero-feature h2 {
-            margin: 0 0 12px;
+            margin: 0 0 10px;
             color: #fffaf0;
-            font-size: 1.95rem;
+            font-size: 1.8rem;
             font-weight: 500;
-            letter-spacing: 0.6px;
-            line-height: 1.15;
+            letter-spacing: 0.4px;
+            line-height: 1.12;
             text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
             border: none;
             padding: 0;
         }
 
         .hero-feature p {
-            margin: 0 auto 18px;
-            max-width: 390px;
+            margin: 0 auto 14px;
+            max-width: 360px;
             color: rgba(255, 250, 240, 0.92);
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 0.92rem;
-            line-height: 1.55;
+            font-size: 0.86rem;
+            line-height: 1.45;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
         }
 
@@ -244,15 +246,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 11px;
-            margin: 14px auto 16px;
+            gap: 10px;
+            margin: 10px auto 12px;
             color: var(--soft-gold);
         }
 
         .hero-divider::before,
         .hero-divider::after {
             content: "";
-            width: 92px;
+            width: 82px;
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(242, 223, 179, 0.75), transparent);
         }
@@ -261,9 +263,9 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 9px;
+            gap: 8px;
             padding: 0;
-            margin: 0 0 20px;
+            margin: 0 0 16px;
             list-style: none;
         }
 
@@ -272,10 +274,10 @@
             color: #fff7df;
             border: 1px solid rgba(242, 223, 179, 0.66);
             background: rgba(20, 18, 16, 0.24);
-            padding: 6px 11px;
+            padding: 5px 10px;
             border-radius: 999px;
             font-family: "Segoe UI", Arial, sans-serif;
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             font-weight: 700;
             box-shadow: 0 0 12px rgba(242, 223, 179, 0.12);
         }
@@ -288,10 +290,10 @@
             min-width: 210px;
             background: rgba(25, 20, 18, 0.42);
             color: #fffaf0;
-            padding: 11px 24px;
+            padding: 10px 22px;
             border-radius: 999px;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 500;
             text-decoration: none;
             border: 1px solid rgba(242, 223, 179, 0.85);
@@ -315,12 +317,12 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 13px;
+            margin-top: 10px;
             padding: 7px 17px;
             border-radius: 999px;
             color: #f8e8ba;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 0.76rem;
+            font-size: 0.74rem;
             text-decoration: none;
             border: 1px solid rgba(242, 223, 179, 0.55);
             background: rgba(20, 18, 16, 0.28);
@@ -594,6 +596,25 @@
             font-size: 0.85rem;
         }
 
+        @media (max-width: 980px) {
+            .hero {
+                padding: 28px 34px;
+                gap: 28px;
+            }
+
+            .hero-content {
+                flex: 0 0 360px;
+            }
+
+            .hero h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 900px) {
             .hero {
                 flex-direction: column;
@@ -610,7 +631,7 @@
             }
 
             .profile-wrap {
-                margin: 0 auto 22px;
+                margin: 0 auto 18px;
             }
 
             .hero-feature {
@@ -618,18 +639,22 @@
                 max-width: 520px;
                 width: 100%;
             }
+
+            .hero .subtitle {
+                white-space: normal;
+            }
         }
 
         @media (max-width: 768px) {
             .hero {
-                min-height: 390px;
-                padding: 30px 22px;
+                min-height: 380px;
+                padding: 28px 22px;
             }
 
             .profile-wrap {
                 width: 132px;
                 height: 132px;
-                margin: 0 auto 18px;
+                margin: 0 auto 16px;
             }
 
             .profile-wrap::before {
@@ -643,40 +668,41 @@
             }
 
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 2.1rem;
             }
 
             .hero .subtitle {
-                font-size: 0.95rem;
+                font-size: 0.86rem;
+                white-space: normal;
             }
 
             .social-button {
                 width: 40px;
                 height: 40px;
                 font-size: 0.95rem;
-                margin-top: 15px;
+                margin-top: 14px;
             }
 
             .app-orbit {
-                width: 126px;
-                height: 126px;
+                width: 118px;
+                height: 118px;
             }
 
             .app-orbit::before {
-                width: 166px;
-                height: 62px;
+                width: 158px;
+                height: 56px;
             }
 
             .app-icon {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
 
             .hero-feature h2 {
-                font-size: 1.65rem;
+                font-size: 1.55rem;
             }
 
             .hero-feature p {
-                font-size: 0.86rem;
+                font-size: 0.82rem;
             }
 
             nav a {
@@ -739,9 +765,8 @@
                 <h2>CPA ISC Study App</h2>
 
                 <p>
-                    A web-based study tool designed to help CPA candidates practice ISC concepts
-                    through topic-based questions, instant feedback, score tracking, progress tracking,
-                    and light gamification. The app combines accounting knowledge with an engaging user experience.
+                    A focused CPA study tool with topic-based questions,
+                    instant feedback, score tracking, and light gamification.
                 </p>
 
                 <div class="hero-divider">✦</div>
