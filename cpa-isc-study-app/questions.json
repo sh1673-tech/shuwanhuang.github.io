@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "appName": "CPA ISC Study App",
+    "version": "1.0.0",
+    "examSection": "ISC",
+    "fullName": "Information Systems and Controls",
+    "description": "A web-based study app for CPA ISC practice with topic-based questions, explanations, score tracking, progress tracking, and light gamification.",
+    "theme": {
+      "style": "Professional CPA study dashboard with light fantasy gamification",
+      "emojis": {
+        "practice": "🧙",
+        "review": "📜",
+        "topics": "📚",
+        "security": "🛡️",
+        "score": "⭐",
+        "streak": "🔥",
+        "badge": "🏆",
+        "progress": "🔮",
+        "celebration": "🎉",
+        "correct": "✨",
+        "incorrect": "📌"
+      }
+    },
+    "questionTypes": [
+      "MCQ",
+      "TRUE_FALSE",
+      "FLASHCARD"
+    ],
+    "contentAreas": [
+      "Information Systems and Data Management",
+      "Security, Confidentiality, and Privacy",
+      "SOC Engagements"
+    ],
+    "skillLevels": [
+      "Remembering and Understanding",
+      "Application",
+      "Analysis"
+    ],
+    "difficultyLevels": [
+      "Easy",
+      "Medium",
+      "Hard"
+    ],
+    "scoringRules": {
+      "basePointsCorrect": 10,
+      "streakBonusAfter": 3,
+      "streakBonusPoints": 5,
+      "perfectQuizBadge": "🏆 Accuracy Master",
+      "passingScorePercent": 75
+    }
+  },
+  "questions": [
+    {
+      "id": "ISC-MCQ-001",
+      "questionType": "MCQ",
+      "contentArea": "Security, Confidentiality, and Privacy",
+      "topic": "Access Controls",
+      "subtopic": "Multi-factor Authentication",
+      "skillLevel": "Application",
+      "difficulty": "Easy",
+      "estimatedTimeSeconds": 75,
+      "emoji": "🛡️",
+      "question": "Which control best strengthens user authentication for a cloud-based accounting system?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Multi-factor authentication"
+        },
+        {
+          "id": "B",
+          "text": "Monthly financial statement review"
+        },
+        {
+          "id": "C",
+          "text": "Physical inventory observation"
+        },
+        {
+          "id": "D",
+          "text": "Depreciation schedule approval"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Multi-factor authentication strengthens user authentication because it requires users to provide more than one form of verification, such as a password plus a code or biometric factor.",
+      "whyWrong": {
+        "B": "Financial statement review is a detective business review control, not an authentication control.",
+        "C": "Physical inventory observation relates to inventory existence, not system login security.",
+        "D": "Depreciation schedule approval relates to accounting estimates, not user authentication."
+      },
+      "tags": [
+        "cybersecurity",
+        "access control",
+        "authentication",
+        "cloud systems"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-002",
+      "questionType": "MCQ",
+      "contentArea": "Information Systems and Data Management",
+      "topic": "Change Management",
+      "subtopic": "System Change Approval",
+      "skillLevel": "Application",
+      "difficulty": "Medium",
+      "estimatedTimeSeconds": 90,
+      "emoji": "📚",
+      "question": "A company is updating its accounting software. Which procedure best reduces the risk of unauthorized or poorly tested system changes?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Allowing developers to move changes directly into production"
+        },
+        {
+          "id": "B",
+          "text": "Requiring formal approval, testing, and documentation before implementation"
+        },
+        {
+          "id": "C",
+          "text": "Giving all accounting employees administrator access during the update"
+        },
+        {
+          "id": "D",
+          "text": "Skipping user acceptance testing to reduce implementation time"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A strong change management process requires changes to be authorized, tested, documented, and approved before they are implemented in production.",
+      "whyWrong": {
+        "A": "Developers should not move changes directly into production without review and approval.",
+        "C": "Giving broad administrator access increases security risk and weakens access control.",
+        "D": "Skipping testing increases the risk that errors or control weaknesses enter the system."
+      },
+      "tags": [
+        "change management",
+        "IT general controls",
+        "authorization",
+        "testing"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-003",
+      "questionType": "MCQ",
+      "contentArea": "Security, Confidentiality, and Privacy",
+      "topic": "Data Protection",
+      "subtopic": "Encryption",
+      "skillLevel": "Remembering and Understanding",
+      "difficulty": "Easy",
+      "estimatedTimeSeconds": 70,
+      "emoji": "🔐",
+      "question": "What is the primary purpose of encrypting sensitive customer data?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "To make the data easier to search"
+        },
+        {
+          "id": "B",
+          "text": "To prevent all data entry errors"
+        },
+        {
+          "id": "C",
+          "text": "To make the data unreadable to unauthorized users"
+        },
+        {
+          "id": "D",
+          "text": "To replace the need for user access controls"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Encryption protects confidentiality by converting readable data into an unreadable format unless the user has the proper decryption key.",
+      "whyWrong": {
+        "A": "Encryption may make searching more complex, not easier.",
+        "B": "Encryption protects confidentiality, but it does not prevent data entry errors.",
+        "D": "Encryption supports security, but it does not replace access controls."
+      },
+      "tags": [
+        "encryption",
+        "confidentiality",
+        "data protection",
+        "privacy"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-004",
+      "questionType": "MCQ",
+      "contentArea": "Information Systems and Data Management",
+      "topic": "Data Management",
+      "subtopic": "Data Integrity",
+      "skillLevel": "Application",
+      "difficulty": "Medium",
+      "estimatedTimeSeconds": 90,
+      "emoji": "🔮",
+      "question": "Which control most directly helps ensure that only complete and valid sales transactions are entered into an accounting system?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Input validation checks"
+        },
+        {
+          "id": "B",
+          "text": "Annual employee performance reviews"
+        },
+        {
+          "id": "C",
+          "text": "Marketing campaign analysis"
+        },
+        {
+          "id": "D",
+          "text": "Office building access badges"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Input validation checks help ensure that data entered into a system is complete, valid, and reasonable before it is processed.",
+      "whyWrong": {
+        "B": "Performance reviews relate to human resource management, not transaction data validity.",
+        "C": "Marketing analysis does not directly validate accounting transaction input.",
+        "D": "Building access badges are physical security controls, not application input controls."
+      },
+      "tags": [
+        "data integrity",
+        "input controls",
+        "application controls",
+        "sales transactions"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-005",
+      "questionType": "MCQ",
+      "contentArea": "SOC Engagements",
+      "topic": "SOC Reports",
+      "subtopic": "SOC 1 vs SOC 2",
+      "skillLevel": "Remembering and Understanding",
+      "difficulty": "Medium",
+      "estimatedTimeSeconds": 90,
+      "emoji": "📜",
+      "question": "A payroll service organization processes payroll transactions that affect its customers' financial statements. Which type of SOC report is most likely relevant to the customers' financial statement audits?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "SOC 1 report"
+        },
+        {
+          "id": "B",
+          "text": "SOC 2 report"
+        },
+        {
+          "id": "C",
+          "text": "SOC 3 report"
+        },
+        {
+          "id": "D",
+          "text": "A general customer satisfaction report"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "A SOC 1 report focuses on controls at a service organization that are relevant to user entities' internal control over financial reporting.",
+      "whyWrong": {
+        "B": "SOC 2 focuses on trust services criteria such as security, availability, processing integrity, confidentiality, and privacy.",
+        "C": "SOC 3 is a general-use report and is less detailed than SOC 2.",
+        "D": "Customer satisfaction does not provide assurance over financial reporting controls."
+      },
+      "tags": [
+        "SOC 1",
+        "service organization",
+        "financial reporting",
+        "payroll"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-006",
+      "questionType": "MCQ",
+      "contentArea": "SOC Engagements",
+      "topic": "Trust Services Criteria",
+      "subtopic": "Security",
+      "skillLevel": "Application",
+      "difficulty": "Hard",
+      "estimatedTimeSeconds": 105,
+      "emoji": "🛡️",
+      "question": "A cloud service provider wants to demonstrate that its system is protected against unauthorized access, unauthorized disclosure of information, and damage to systems. Which trust services category is most central to this objective?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Security"
+        },
+        {
+          "id": "B",
+          "text": "Profitability"
+        },
+        {
+          "id": "C",
+          "text": "Market share"
+        },
+        {
+          "id": "D",
+          "text": "Depreciation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Security is the common foundation of the trust services criteria and relates to protecting systems and information from unauthorized access, disclosure, and damage.",
+      "whyWrong": {
+        "B": "Profitability is a business performance measure, not a trust services category.",
+        "C": "Market share is a competitive measure, not a system control category.",
+        "D": "Depreciation is an accounting allocation concept, not a SOC trust services category."
+      },
+      "tags": [
+        "SOC 2",
+        "trust services criteria",
+        "security",
+        "cloud systems"
+      ],
+      "xp": 15,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-007",
+      "questionType": "MCQ",
+      "contentArea": "Security, Confidentiality, and Privacy",
+      "topic": "Incident Response",
+      "subtopic": "Security Incident Handling",
+      "skillLevel": "Analysis",
+      "difficulty": "Hard",
+      "estimatedTimeSeconds": 110,
+      "emoji": "🔥",
+      "question": "A company discovers that an employee account was used to access sensitive customer records without a business reason. What should management do first?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Immediately delete all system logs"
+        },
+        {
+          "id": "B",
+          "text": "Preserve evidence and follow the incident response plan"
+        },
+        {
+          "id": "C",
+          "text": "Ignore the issue if no customer complained"
+        },
+        {
+          "id": "D",
+          "text": "Give the employee broader access to investigate the issue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Management should preserve evidence, restrict further unauthorized access if needed, and follow the organization's incident response plan to investigate and respond appropriately.",
+      "whyWrong": {
+        "A": "Deleting logs destroys important evidence.",
+        "C": "Unauthorized access should be investigated even if no customer has complained.",
+        "D": "Expanding access could increase the risk of additional unauthorized activity."
+      },
+      "tags": [
+        "incident response",
+        "privacy",
+        "security monitoring",
+        "investigation"
+      ],
+      "xp": 15,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-008",
+      "questionType": "MCQ",
+      "contentArea": "Information Systems and Data Management",
+      "topic": "Business Continuity",
+      "subtopic": "Backup and Recovery",
+      "skillLevel": "Application",
+      "difficulty": "Medium",
+      "estimatedTimeSeconds": 90,
+      "emoji": "🧙",
+      "question": "Which practice best supports recovery of accounting data after a system outage or ransomware event?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Maintaining tested backups stored separately from the primary system"
+        },
+        {
+          "id": "B",
+          "text": "Using the same password for all accounting users"
+        },
+        {
+          "id": "C",
+          "text": "Disabling audit logs to improve system speed"
+        },
+        {
+          "id": "D",
+          "text": "Allowing only one employee to understand the recovery process"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tested backups stored separately from the primary system improve the organization's ability to restore data after an outage, data loss, or ransomware incident.",
+      "whyWrong": {
+        "B": "Shared or repeated passwords weaken security.",
+        "C": "Audit logs are important for monitoring and investigation.",
+        "D": "Knowledge concentration creates key-person risk and may slow recovery."
+      },
+      "tags": [
+        "business continuity",
+        "backup",
+        "recovery",
+        "ransomware"
+      ],
+      "xp": 10,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-009",
+      "questionType": "MCQ",
+      "contentArea": "Security, Confidentiality, and Privacy",
+      "topic": "Segregation of Duties",
+      "subtopic": "Access Rights",
+      "skillLevel": "Analysis",
+      "difficulty": "Hard",
+      "estimatedTimeSeconds": 105,
+      "emoji": "⚖️",
+      "question": "Which situation creates the greatest segregation of duties concern in an accounting information system?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A user can create vendors and approve payments to vendors"
+        },
+        {
+          "id": "B",
+          "text": "A user can view read-only sales reports"
+        },
+        {
+          "id": "C",
+          "text": "A user must reset a password using multi-factor authentication"
+        },
+        {
+          "id": "D",
+          "text": "A user can access training materials"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Allowing the same user to create vendors and approve vendor payments creates a segregation of duties risk because the user could create a fictitious vendor and authorize payment.",
+      "whyWrong": {
+        "B": "Read-only access is usually lower risk than access that allows creation and approval.",
+        "C": "Password reset with multi-factor authentication is a security process, not a segregation of duties conflict.",
+        "D": "Training materials generally do not create a significant accounting transaction risk."
+      },
+      "tags": [
+        "segregation of duties",
+        "vendor master file",
+        "payments",
+        "fraud risk"
+      ],
+      "xp": 15,
+      "status": "active"
+    },
+    {
+      "id": "ISC-MCQ-010",
+      "questionType": "MCQ",
+      "contentArea": "SOC Engagements",
+      "topic": "Complementary User Entity Controls",
+      "subtopic": "Shared Responsibility",
+      "skillLevel": "Application",
+      "difficulty": "Medium",
+      "estimatedTimeSeconds": 95,
+      "emoji": "🤝",
+      "question": "A SOC report states that the user entity is responsible for reviewing user access reports provided by the service organization. This is an example of which concept?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Complementary user entity control"
+        },
+        {
+          "id": "B",
+          "text": "Encryption key rotation"
+        },
+        {
+          "id": "C",
+          "text": "Physical inventory reconciliation"
+        },
+        {
+          "id": "D",
+          "text": "Marketing performance measurement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "A complementary user entity control is a control that the user entity must implement for the service organization's controls to achieve their intended objectives.",
+      "whyWrong": {
+        "B": "Encryption key rotation is a security practice, but it is not the concept described in the question.",
+        "C": "Inventory reconciliation is unrelated to user responsibilities in a SOC report.",
+        "D": "Marketing performance measurement is unrelated to SOC control responsibilities."
+      },
+      "tags": [
+        "SOC report",
+        "complementary user entity controls",
+        "CUEC",
+        "shared responsibility"
+      ],
+      "xp": 10,
+      "status": "active"
+    }
+  ]
+}
