@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPA ISC Study App</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <header class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">🧙 CPA ISC Quest</p>
+                <h1>CPA ISC Study App</h1>
+                <p class="hero-description">
+                    A professional CPA study tool with light fantasy gamification.
+                    Practice ISC questions, track your score, review mistakes, and build your study streak.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="startBtn" class="primary-btn">🧙 Start Practice</button>
+                    <button id="reviewBtn" class="secondary-btn">📜 Review Mistakes</button>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <h2>Today’s Study Dashboard</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">⭐</span>
+                        <p>XP Points</p>
+                        <strong id="xpDisplay">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">🎯</span>
+                        <p>Accuracy</p>
+                        <strong id="accuracyDisplay">0%</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">🔥</span>
+                        <p>Streak</p>
+                        <strong id="streakDisplay">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">🏆</span>
+                        <p>Badges</p>
+                        <strong id="badgeDisplay">0</strong>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <div>
+                    <h2>📚 Choose Your Study Path</h2>
+                    <p>
+                        Filter questions by content area and difficulty. Your progress will update as you practice.
+                    </p>
+                </div>
+
+                <div class="filters">
+                    <label>
+                        Content Area
+                        <select id="contentFilter">
+                            <option value="all">All Areas</option>
+                            <option value="Information Systems and Data Management">Information Systems and Data Management</option>
+                            <option value="Security, Confidentiality, and Privacy">Security, Confidentiality, and Privacy</option>
+                            <option value="SOC Engagements">SOC Engagements</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Difficulty
+                        <select id="difficultyFilter">
+                            <option value="all">All Levels</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section class="progress-section">
+                <div class="progress-header">
+                    <span id="progressText">Progress: 0 / 0</span>
+                    <span id="scoreText">Score: 0</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </section>
+
+            <section id="quizCard" class="quiz-card">
+                <div class="question-meta">
+                    <span id="questionNumber">Question 1</span>
+                    <span id="questionType">MCQ</span>
+                    <span id="questionDifficulty">Difficulty</span>
+                </div>
+
+                <div class="topic-row">
+                    <span id="questionEmoji">🛡️</span>
+                    <div>
+                        <p id="contentAreaLabel">Content Area</p>
+                        <h3 id="topicLabel">Topic</h3>
+                    </div>
+                </div>
+
+                <h2 id="questionText">
+                    Click Start Practice to begin your ISC study quest.
+                </h2>
+
+                <div id="choicesContainer" class="choices-container">
+                    <!-- Choices will be loaded by app.js -->
+                </div>
+
+                <div id="feedbackBox" class="feedback-box hidden">
+                    <h3 id="feedbackTitle"></h3>
+                    <p id="feedbackExplanation"></p>
+                    <div id="whyWrongBox"></div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button id="submitBtn" class="primary-btn" disabled>Submit Answer</button>
+                    <button id="nextBtn" class="secondary-btn hidden">Next Question</button>
+                </div>
+            </section>
+
+            <section id="resultCard" class="result-card hidden">
+                <h2>🎉 Quest Complete!</h2>
+                <p id="finalScoreText"></p>
+                <p id="finalAccuracyText"></p>
+                <p id="finalMessage"></p>
+
+                <div id="badgeUnlocked" class="badge-box hidden">
+                    🏆 New Badge Unlocked!
+                </div>
+
+                <button id="restartBtn" class="primary-btn">Restart Practice</button>
+            </section>
+
+            <section id="reviewSection" class="review-section hidden">
+                <h2>📜 Scroll Review: Mistake List</h2>
+                <p>
+                    Questions you missed will appear here so you can review them later.
+                </p>
+
+                <div id="mistakesContainer" class="mistakes-container">
+                    <!-- Mistakes will be loaded by app.js -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Built by Shuwan Huang | CPA ISC Study App | Portfolio Project
+            </p>
+        </footer>
+    </div>
+
+    <div id="confettiLayer" class="confetti-layer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
